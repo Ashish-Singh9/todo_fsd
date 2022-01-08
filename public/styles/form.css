@@ -1,0 +1,132 @@
+:root{
+    --green-Baground:#74a2e7e1;
+    --green-baagroundHover:#5a92e6;
+    --white-Background:white;    
+    --margin-cont:3rem;
+    --border-radius:10px;
+    --font-size:1.2rem;
+    --border-LeftRight:1px solid white;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(152deg, #3be7fd 50%, #ececec 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    margin: 3rem;
+    border:2px solid rgba(214, 211, 211, 0.966);
+    border-left: var(--border-LeftRight);
+    border-right: var(--border-LeftRight);
+    padding: 3.5rem 3rem;
+    background-color: var(--white-Background);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(332deg, #3be7fd 50%, #ececec 50%);
+}
+.labelInput{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.labelInput label{
+    font-weight: 600;
+    font-size: 16px;
+    margin: 30px 0 0;
+}
+.labelInput input{
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.4rem;
+    padding-bottom: 0.1rem;
+    font-size: var(--font-size);
+    border:none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    color: #333;
+    background-color: #ececec;
+}
+#brand{
+    color: var(--green-baagroundHover);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+#passInfo{
+    color: rgba(255, 0, 0, 0.657);
+}
+.labelInput input:focus-within{
+    border-bottom: 2px solid blue;
+}
+.headingFp{
+    font-weight: 700;
+    font-size: 29px;
+    margin-bottom: 0;
+}
+.instructionP{
+    margin-top: 36px;
+}
+#isntFromS{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#sendBtnEmail{
+    width: 100%;
+    font-size: var(--font-size);
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid white;
+    background-color: var(--green-Baground);
+    border-radius: var(--border-radius);
+    color: white;
+}
+#sendBtnEmail:hover{
+    background-color: var(--green-baagroundHover);
+}
+.linkDiv {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.link{
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+.link-fpDiv{
+    justify-content: space-around;
+}
+.link:hover{
+    color: var(--green-baagroundHover);
+}
+.info-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#info{
+    font-weight: 700;
+    color: rgba(255, 0, 149, 0.787);
+
+}
+@media (max-width:1000px)
+{
+    .container{
+        margin: 1rem;
+        padding: 1.5rem 1rem;
+    }
+}

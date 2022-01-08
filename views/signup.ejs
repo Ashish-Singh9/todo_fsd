@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/signup.js"></script>
+    <title>login</title>
+</head>
+<body>
+    <form action="/signup" method="post">
+        <div class="container">
+            <span id="info"><%=info%></span>
+            <h3 class="headingFp">Signup</h3>
+            <p class="instructionP">must contain atleast 8 <br/><span id="passInfo"> letters (upper and lower case),numbers, and symbols </span></span></p>
+            <div class="labelInput">  
+                <input type="text" name="name" id="name" placeholder="name">
+            </div>
+            <div class="labelInput">  
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="labelInput">  
+                <input type="password" name="password" id="password" placeholder="password">
+            </div>
+            <button id="sendBtnEmail">Sign up</button>
+            <div class="linkDiv">
+                <a class="link" href="/signin">Sign in</a>
+                <a class="link" href="/forgot">Forgot password</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

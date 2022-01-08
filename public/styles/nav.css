@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.nav{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #333;
+}
+.profilePic{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color:#3498db;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;    
+}
+.userBasicInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.2rem;
+    color: white;
+}
+.homeHead{
+    text-transform: capitalize;    
+}
