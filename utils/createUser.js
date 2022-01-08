@@ -4,7 +4,6 @@ var bcrypt = require('bcryptjs');
 module.exports=async function saveUser(newUser,callback){
     
     const salt=await bcrypt.genSalt(10);
-    console.log(newUser.password,'create');
     const secPassword=await bcrypt.hash(newUser.password,salt);
 	const user = new userModel();
 
@@ -12,7 +11,7 @@ module.exports=async function saveUser(newUser,callback){
     user.email=newUser.email;
     user.password=secPassword;
     user.active=true;
-    user.todos=[{}];
+    user.todos=[];
 	const saveUserModel = user.save(function(err){
         if(err)
         {

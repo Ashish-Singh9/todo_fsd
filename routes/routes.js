@@ -13,7 +13,11 @@ const {
 }=require('../controller/authReq');
 //contoller for todoweb app
 const {
-    todo
+    todo,
+    getTodo,
+    saveTodo,
+    modifyTodo,
+    deleteTodo
 }=require('../controller/appReq');
 
 const router=express.Router();
@@ -26,5 +30,7 @@ router.route('/logout').get(checkAuth,logout);
 router.route('/forgot').get(forgotPassword);
 router.route('/changepassword').get(checkAuth,changePassword);
 router.route('/todo').get(checkAuth,todo);
+
+router.route('/wtodo').get(getTodo).post(saveTodo).patch(modifyTodo).delete(deleteTodo);
 router.get("*",pageNotFound);
 module.exports =router;

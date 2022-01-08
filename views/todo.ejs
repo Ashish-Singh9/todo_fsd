@@ -5,11 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/todo.css">
+    <script defer src="scripts/search.js"></script>
+    <script defer src="scripts/todo.js"></script>
     <title>todo</title>
 </head>
 <body>
     <div class="container">
         <%- include('partials/header'),{user} %>
+        <div class="todobody">
+            <!--input taken from user either press enter or click add -->
+            <div class="todoListCont">
+                <!--Taks list coinatiner -->
+                <div class="search__bar">
+                    <form class="d-flex align-items-center justify-content-center">
+                      <input placeholder="Search Task" id="searchtextbox" />
+                    </form>
+                  </div>
+                <!--input for search -->
+                <div class="todoTableCont">
+                    <!--Todo table -->
+                    <table class="todoTable">
+                        <tbody id="todoTableBody">
+<!--                             
+                            <tr>
+                                <td>1</td>
+                                <td class="todoData"> 
+                                    <div class="todoDate_time">
+                                        <span id="todoTime">23:14</span>
+                                        <span id="todoDate">11/11/21</span>
+                                    </div>
+                                    <div class="todoTaskText">
+                                        <table class="contentTable">
+                                            <tbody>
+                                                <tr class="contentTr">
+                                                    <td>"aecat cupidatat non proide"</td>
+                                                    <td>
+                                                        <img src="./css/image.jpg" id="imgTodo" alt="">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> 
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="todoTaskDone_Undone" id="todoTaskDone_Undone"> 
+                                </td>
+                                <td id="todoDeleteTask">
+                                    <img src="css/trashBox.svg" alt="trashBox" id="taskDelete">
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="todoInputCont">
+                <input type="text" placeholder="enter task" class="todoInputBox" id="todoInputBox">
+                <button id="todoBtn">+</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -19,7 +19,7 @@ const userDb = new Schema({
     type: Boolean,
     required:[true,"Its seems something is missing!!"]
   },
-  todos:[{todo:String,time:Date,date:Date}]
+  todos:[{task:String,isComplete:Boolean,time:String,date:String}]
 });
 
 

@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+  /*  background-image: url("bg.png");*/
+    background-repeat: no-repeat;
+    background-size: auto;
+    overflow-y: hidden;
+    background-color: #6ba3fe;
+}
+/* body cointainer */
+.cointainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+/* Table style */
+.todoTable{
+    font-size: 1rem;
+    width: 100%;
+}
+.todoTable tbody tr{
+    padding:0.3rem 0rem ;
+ border-radius: 5px;
+ color:white;
+ width: 100%;
+ display: grid;
+ align-items: center;
+ grid-template-columns:1fr 5fr 1fr 1fr;
+ margin-bottom: 1rem;
+ border-radius:10px;
+  background: linear-gradient( 
+    111.41deg, rgb(0 0 0 / 64%) -26.06%, rgb(0 0 0 / 83%) 73.94% );
+}
+.todoTable tbody tr th {
+    font-weight: 500;
+  }
+.todoTable td{
+    padding: 0.8rem;
+}
+/*content table (table inside table)*/
+.contentTable tbody tr{
+    display: grid;
+    align-items: center;
+    grid-template-columns:2fr 1fr;
+    background: transparent !important;
+}
+.imgTodo{
+    height: 40px;
+    width: 40px;
+}
+.todobody{
+    background-color: rgba(255, 255, 255, 0.486);
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.todoInputCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.253);
+    padding: 1.1rem 0.5rem;
+    border-radius: 10px;
+}
+.todoListCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 80vh;
+}
+
+/* Table parent cointainer */
+.todoTableCont{
+    display: grid;
+    justify-items: center;
+    max-height: 64vh;
+    overflow-y: scroll; 
+    padding: 1px;
+}
+.todoInputBox{
+    height: 3rem;
+    font-size: 1.1rem;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    border:none;
+    width:65% ;
+    padding-left: 0.5rem;
+}
+.todoListCont .search__bar {
+    height: 5rem;
+    width: 100%;
+    padding: 1rem 10px;
+    border-bottom: 1px solid var(--white);
+  }
+  
+  .todoListCont .search__bar form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .todoListCont .search__bar input {
+      font-size: 0.95rem;
+    width: 44%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    background-size: 18px;
+    color: black;
+    border:2px solid black;
+    -webkit-transition: all 800ms ease;
+    transition: all 800ms ease;
+    padding: 20px 0px 20px 40px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 15px 50%;
+    border-radius: 5px;
+    -webkit-backdrop-filter:100px;
+    backdrop-filter: 100px;
+    font-weight: 500;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%23717790c7'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
+  }
+  
+  .todoListCont .search__bar input:focus {
+    width: 100%;
+  }
+  #todoBtn{
+    height: 3rem;
+    font-size: 1.6rem;
+    padding: 0.2rem 1rem;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: #3333;
+    color: rgb(251, 181, 192);
+  }
+  #todoBtn:active{
+    color: red;
+    }
+  .todoData{
+      display: flex;
+      flex-direction: column;
+  }
+  .todoDate_time{
+      font-size: small;
+      font-weight: 800;
+      padding-bottom: 0.3rem;
+      letter-spacing: 1.5px;
+      color: rgba(238, 106, 29, 0.623);
+  }
+  #todoDate{
+      margin-left: 10px;
+  }
+  #todoDeleteTask img{
+      transition: 0.4s;
+  }
+  #todoDeleteTask img:hover{
+    height: 28px;
+    width: 28px;
+    transition: 0.4s;
+  }
+  #todoTaskDone_Undone{
+      zoom: 1.8;
+      outline: none;
+  }
+
+  @media(min-width:800px){
+    .todobody{
+        flex-direction:row;
+        height: 90vh;
+    }
+    .todoInputCont{
+        width: 30%;
+    }   
+    .todoListCont{
+        width: 70%;
+        max-height: 90vh !important;
+    }
+    .todoTableCont{
+        height:75vh !important ;
+    }
+}
+
+/*custom scrroll bar */
+/* width of scrroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background:rgba(255, 255, 255, 0.692);  
+    
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background-color: white;
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background:#333; 
+    box-shadow: none;
+    }
+    ol{
+        padding: 0;
+        margin: 0;
+    }
+    li::marker{
+        padding: 0;
+        margin: 0;
+    }

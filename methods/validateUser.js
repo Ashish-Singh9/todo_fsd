@@ -5,10 +5,7 @@ module.exports=function(checkUser,callback){
         if(isUserExist)
         {
             let pass=user.password;
-            console.log(typeof pass);
-            console.log(typeof checkUser.password,checkUser.password);
             const passComp=await bcrypt.compare(checkUser.password,pass);
-            console.log(user);
             if(passComp)
             callback(true,user);
             else

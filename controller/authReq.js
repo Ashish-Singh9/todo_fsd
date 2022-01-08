@@ -12,7 +12,6 @@ const loginPost=(req,res)=>{
         password:req.body.password
     }
     validateUser(checkUser,function(isUser,user){
-        console.log(user.name[0]);
         if(isUser){
             req.session.is_logged_in = true;
             let sendAbleUserData={
