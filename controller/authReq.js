@@ -128,7 +128,7 @@ const welcome=(req,res)=>{
     }
 }
 const pageNotFound=(req,res)=>{
-    res.send("404 page not found");
+    res.render('pageNotFound.ejs');
 }
 module.exports ={
     login,
