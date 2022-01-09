@@ -19,7 +19,9 @@ const userDb = new Schema({
     type: Boolean,
     required:[true,"Its seems something is missing!!"]
   },
-  todos:[{task:String,isComplete:Boolean,time:String,date:String}]
+  todos:[{task:String,isComplete:Boolean,time:String,date:String}],
+  secKey:String,
+  isWc:Boolean
 });
 
 

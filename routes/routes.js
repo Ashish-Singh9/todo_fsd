@@ -8,7 +8,10 @@ const {
     signupPost,
     logout,
     forgotPassword,
+    forgotPasswordPost,
     changePassword,
+    changePasswordPost,
+    welcome,
     pageNotFound
 }=require('../controller/authReq');
 //contoller for todoweb app
@@ -27,10 +30,11 @@ router.route('/').get(login);
 router.route('/signin').get(login).post(loginPost);
 router.route('/signup').get(signup).post(signupPost);
 router.route('/logout').get(checkAuth,logout);
-router.route('/forgot').get(forgotPassword);
-router.route('/changepassword').get(checkAuth,changePassword);
+router.route('/forgot').get(forgotPassword).post(forgotPasswordPost);
+router.route('/changepassword').get(checkAuth,changePassword).post(changePasswordPost);
+router.route('/welcomePage').get(welcome);
 router.route('/todo').get(checkAuth,todo);
 
-router.route('/wtodo').get(getTodo).post(saveTodo).patch(modifyTodo).delete(deleteTodo);
+router.route('/wtodo',checkAuth).get(getTodo).post(saveTodo).patch(modifyTodo).delete(deleteTodo);
 router.get("*",pageNotFound);
 module.exports =router;

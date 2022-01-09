@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/form.css">
     <script defer src="scripts/signup.js"></script>
+    <script defer src="scripts/showHideBtn.js"></script>
     <title>login</title>
 </head>
 <body>
@@ -22,6 +23,11 @@
             </div>
             <div class="labelInput">  
                 <input type="password" name="password" id="password" placeholder="password">
+                <div class="labelSvg">
+                    <button id="btnShowHide">
+                        <img src="styles/eyeOpen.svg" alt="" id="eyeImg">
+                    </button>
+                </div>  
             </div>
             <button id="sendBtnEmail">Sign up</button>
             <div class="linkDiv">

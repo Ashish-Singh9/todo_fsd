@@ -195,8 +195,10 @@ function deleteTodoReq(todoTask){
     request.addEventListener("load", function()
     {
         
-        request.status === 200 && getTodo(setTodo);
+       if( request.status === 200 ){ 
         clearTask();
+        getTodo(setTodo);
+       }
 
     });   
 }

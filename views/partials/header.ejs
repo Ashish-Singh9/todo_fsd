@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/navBar.css">
     <link rel="stylesheet" href="styles/dropDown.css">
     <script defer src="scripts/dropDown.js"></script>
     <title></title>
@@ -11,7 +12,7 @@
 <body>
     <div class="nav">
         <div class="userInfo">
-            <div class="profilePic" ><%=user.avatar%></div>
+            <a href="/todo"><div class="profilePic" ><%=user.avatar%></div></a>
         </div>
         <div class="dropdown">
             <button id="dropDownBtn" class="dropbtn">
@@ -20,9 +21,10 @@
                 </svg>
             </button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#">Welcome <%=user.name%> </a>
+                <a href="/todo">Welcome <%=user.name%> </a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
+              <a href="/changepassword">Change Password</a>
               <a href="/logout">Log Out</a>
             </div>
           </div>

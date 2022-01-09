@@ -2,7 +2,7 @@ const express = require('express')
 const session = require('express-session')
 
 const app = express()
-const PORT = 8000
+const PORT = process.env.PORT||8000
 
 //for setting up ejs views folder
 app.set("view engine", "ejs");
@@ -30,5 +30,5 @@ app.use("/",routes);
 
 
 app.listen(PORT, () => {
-	console.log(`Example app listening at http://localhost:${PORT}`)
+	//console.log(`Example app listening at http://localhost:${PORT}`)
 })
