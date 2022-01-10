@@ -15,21 +15,21 @@ const getTodo=(req,res)=>{
     });
 }
 const saveTodo=(req,res)=>{
-    console.log(req.body,typeof req.body);
+   // console.log(req.body,typeof req.body);
     savetodo(req.body,req.session.user.email,function(){
         //console.log('data Saved!!');
     });
     res.sendStatus(200);
 }
 const modifyTodo=(req,res)=>{
-    console.log(req.body,'modify');
+   // console.log(req.body,'modify');
     modifyTodoDb(req.body,req.session.user.email,function(stats){
         //console.log(stats);
         res.sendStatus(200);
     })
 }
 const deleteTodo=(req,res)=>{
-    console.log(req.body);
+   // console.log(req.body);
     deleteTodoDb(req.body,req.session.user.email,function(stats){
         //console.log(stats);
         res.sendStatus(200);
