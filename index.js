@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static("public"));
 //for using express session
 app.use(session({
-	secret: 'keyboard cat',
+	secret: `${process.env.SECRET}`,
 	resave: false,
 	saveUninitialized: true,
   }))
